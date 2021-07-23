@@ -1,0 +1,29 @@
+<div class="weather-page">
+  <div class="title-container">
+    <span class="title">Weather</span>
+  </div>
+  <div class="weather-container">
+    <div *ngIf="cities" class="city-select-container">
+      <div class="city-dropdown-container">
+        <app-dropdown [cities]="cities"></app-dropdown>
+      </div>
+      <div class="city-button-container">
+        <app-button></app-button>
+      </div>
+    </div>
+    <div class="weather-ui-layout" *ngIf="selectedCityData">
+      <div class="title">{{selectedCityData.name}}</div>
+      <div class="weather-details-1">
+        <app-img [src]="getImgSrc(selectedCityData.weather[0].icon)"></app-img>
+        <div class="weather-info-container">
+          <div class="degrees">{{selectedCityData.main.temp}}{{'&#8451;'}}</div>
+          <div class="type">{{selectedCityData.weather[0].main}}</div>
+        </div>
+      </div>
+      <div class="weather-details-2">
+        <div class="humidity">Humidity: {{selectedCityData.main.humidity}}</div>
+        <div class="air-pressure">Air Pressure: {{selectedCityData.main.pressure}}</div>
+      </div>
+    </div>
+  </div>
+</div>

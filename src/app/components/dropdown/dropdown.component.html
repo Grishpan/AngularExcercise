@@ -1,0 +1,6 @@
+<select (change)="setCity($event)" class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <ng-container *ngFor="let city of cities">
+    <option value="{{city.id}}">{{city.name}}</option>
+  </ng-container>
+</select>

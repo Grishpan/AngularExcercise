@@ -1,0 +1,69 @@
+@import '../../assets/sass/shared-variables';
+
+.weather-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  margin: 50px auto 0;
+  border: 1px solid $borderGray;
+  border-radius: 6px;
+  overflow: auto;
+  .title-container {
+    padding: 15px 20px;
+    background-color: $backgroundGray;
+    border-bottom: 1px solid $borderGray;
+    .title {
+      font-size: 20px;
+      color: $black;
+    }
+  }
+  .weather-container {
+    .city-select-container {
+      display: flex;
+      align-items: center;
+      margin: 20px;
+      .city-dropdown-container {
+
+      }
+      .city-button-container {
+        margin-left: 5px;
+      }
+    }
+    .weather-ui-layout {
+      background-image: url("https://mocah.org/uploads/posts/124344-miui-8-weather-background-minimal-hd.png");
+      background-size: contain;
+      margin: 20px;
+      .title {
+        font-size: 22px;
+        padding: 10px;
+      }
+      .weather-details-1 {
+        display: flex;
+        background-color: rgba(255, 255, 255, .6);
+        .weather-info-container {
+          display: flex;
+          flex-direction: column;
+          margin-left: 10px;
+          .degrees {
+            font-size: 26px;
+          }
+          .type {
+            font-size: 20px;
+          }
+        }
+      }
+      .weather-details-2 {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 5px 20px;
+        .humidity {
+
+        }
+        .air-pressure {
+
+        }
+      }
+    }
+  }
+}
